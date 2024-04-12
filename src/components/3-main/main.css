@@ -1,6 +1,18 @@
+.light{
+    main.flex{
+        & .right-section{
+            & article{
+                border: 1px solid var(--blue-color);
+
+            }
+        }
+    }
+}
 main.flex{
     gap: .8rem;
     align-items: start ;
+    width: 90%;
+    margin-Inline: auto ;
     & .left-section{
         flex-direction: column;
         width: fit-content;
@@ -56,6 +68,7 @@ main.flex{
                 padding-inline: .6rem;
                 & h3{
                     font-weight: bold;
+                    color: var(--text-color);
                     font-size: 1.3rem;
                     margin-top: 1rem;
                     margin-bottom: .7rem;
@@ -106,10 +119,7 @@ main.flex{
                 padding: .8rem 1rem;
                 border-radius: 5px;
                 border: 1px solid var(--border);
-
                 font-size: .8rem;
-
-
             }
         }
     }

@@ -23,6 +23,7 @@ section.contact{
     }
     & div.main{
         justify-content: space-between;
+        /* align-items: start; */
         & form{
             flex-direction: column;
             gap: 2rem;
@@ -72,7 +73,19 @@ section.contact{
 
                 }
             }
+            & .success{
+                & .lottie{
+                    width: 100px;
+                    height: 100px;
+                }
+                & .success-text{
+                    font-size: 1.3rem;
+                    color: var(--subtitle-color);
+                    transform: translate(-25px,10px);
+                }
+            }
         }
+        
     }
 }
 
