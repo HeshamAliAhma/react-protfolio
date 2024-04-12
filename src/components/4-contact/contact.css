@@ -1,0 +1,133 @@
+section.contact{
+    & div.title{
+        align-items: end;
+        position: relative;
+        margin-bottom: 1.1rem;
+        gap: 1rem;
+        & span{
+            font-size: 2.3rem;
+            color: var(--subtitle-color);
+        }
+        & h1{
+            font-size: 2.2rem;
+
+        }
+    }
+    p{
+        margin-bottom: 1.1rem;
+        color: var(--subtitle-color);
+        opacity: .8;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+
+    }
+    & div.main{
+        justify-content: space-between;
+        & form{
+            flex-direction: column;
+            gap: 2rem;
+            align-items: start;
+            /* margin-bottom: 2rem; */
+            & div.flex{
+                gap: 1rem;
+                & #email{
+                    padding: 10px;
+                }
+                & #message{
+                    padding: 10px;
+                    height: 150px;
+                    resize: vertical;
+                }
+                & label{
+                    color: var(--subtitle-color);
+                }
+                & #email, & #message{
+
+                    width: 200px;
+                    background-color: var(--border);
+                    outline: none;
+                    border: none;
+                    border-radius: 5px;
+                    border: 1px solid var(--bgHeader);
+                    transition: .3s;
+                    color: var(--blue-color);
+                    &:hover{
+                        border: 1px solid var(--blue-color);
+                    }
+                    &:focus{
+                        border: 1px solid var(--blue-color);
+                    }
+                }
+            }
+            & button{
+                background-color: var(--border) ;
+                padding: .7rem 1.3rem;
+                text-align: center;
+                font-size: 1.3rem;
+                border-radius: 5px;
+                border: 1px solid var(--bgHeader) ;
+                transition: .3s;
+                &:hover{
+                    border: 1px solid var(--blue-color) ;
+
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (width < 500px){
+    section.contact{
+        & div.title{
+            & h1{
+                font-size: 1.7rem;
+            }
+            & span{
+                font-size: 2rem;
+            }
+
+        }
+    }
+}
+
+@media (width < 700px) {
+    section.contact{
+        p{
+            margin-bottom: 1.1rem;
+            color: var(--subtitle-color);
+            opacity: .8;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+    
+        }
+        & div.main{
+            display: inline-block;
+            width: 90%;
+            margin-inline: auto;
+            & form{
+                & div.flex{
+                    gap: 1rem;
+                    width: 100%;
+                    align-items: start;
+                    flex-direction: column;
+                    & #email, & #message{
+                        width: 100%;
+                    }
+                }
+                & button{
+                    padding-inline:0;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+            article{
+                display: none;
+            }
+        }
+    }
+
+}

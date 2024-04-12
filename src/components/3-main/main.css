@@ -1,0 +1,116 @@
+main.flex{
+    gap: .8rem;
+    align-items: start ;
+    & .left-section{
+        flex-direction: column;
+        width: fit-content;
+        text-align: center;
+        gap: 1rem;
+        & button{
+            width: 110px;
+            padding: .8rem 1rem;
+            border-radius: 5px;
+            border: 1px solid var(--border);
+            opacity: .7;
+            transition: .4s;
+            font-size: .9rem;
+            &.active{
+                border: 1px solid var(--blue-color);
+                background-color: var(--bgHeader);
+                opacity: 1;
+                font-weight: bold;
+            }
+            &:hover{
+                opacity: 1;
+                border: 1px solid var(--blue-color);
+
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+    & .right-section {
+        flex-wrap: wrap;
+        justify-content: center;
+        & article{
+            border: 1px solid var(--bgHeader);
+            scale: .9;
+            border-radius:10px;
+            transition: .3s;
+            &:hover{
+                scale: 1;
+                cursor: pointer;
+                rotate: 4deg;
+            }
+            & img{
+                border-radius:10px 10px 0 0;
+            }
+            & .info{
+                padding-inline: .6rem;
+                & h3{
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                    margin-top: 1rem;
+                    margin-bottom: .7rem;
+                }
+                & p{
+                    color: var(--subtitle-color);
+                    opacity: 0.8;
+                    margin-bottom: .7rem;
+                }
+                & .links{
+                    justify-content: space-between;
+                    margin-bottom: .7rem;
+                    & .left{
+                        gap: .5rem;
+                        font-size: 1.4rem;
+                        & span{
+                            transition: .3s;
+
+                            &:hover{
+                                cursor: pointer;
+                                color: var(--blue-color);
+                            }
+                        }
+                    }
+                    & a{
+                        color : var(--blue-color);
+                        display: flex;
+                        align-items: center;
+                        gap: .3rem;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (width < 600px){
+    main.flex{
+        flex-direction: column;
+        justify-content: center;
+        & .left-section{
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            & button{
+                width: 100px;
+                padding: .8rem 1rem;
+                border-radius: 5px;
+                border: 1px solid var(--border);
+
+                font-size: .8rem;
+
+
+            }
+        }
+    }
+}

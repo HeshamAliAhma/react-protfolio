@@ -1,0 +1,163 @@
+/*
+============================
+======= Header Style =======
+============================
+*/
+
+header {
+    justify-content: space-between;
+    padding-inline: 2.4rem;
+    margin-top: 1.2rem;
+    margin-bottom: 3rem;
+/*
+============================
+======= Pop Up Style =======
+============================
+*/
+
+    & .fixed {
+        position: fixed;
+        inset: 0;
+        background-color: rgb(40, 40, 48, 0.91);
+        z-index: 1000;
+        backdrop-filter: blur(2px);
+        & ul.model {
+            width: 85%;
+            margin-inline: auto;
+            margin-top: 2rem;
+            border-radius: 1rem;
+            padding: 1rem 2rem;
+            background-color: var(--secondary-background);
+            animation: mymove .5s 1;
+            & li {
+                border-bottom: 1px solid var(--border);
+                padding-bottom: 0.77rem;
+                padding-top: 0.5rem;
+
+                & a{
+                    opacity: 0.9;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    &:hover {
+                        color: var(--blue-color);
+                        opacity: 1;
+                        font-size: 0.9rem;}
+                }
+
+                &:first-child {
+                    text-align: right;
+                    border: none;
+                    padding: 0;
+                }
+                &:last-child {border: none;}
+            }
+        }
+    }   
+    
+/*
+===========================
+======= Hidden Menu =======
+===========================
+*/
+    & .menu {
+        display: none;
+    }
+/*
+===========================
+======= Links Style =======
+===========================
+*/
+    & nav {
+        padding: 0.77rem 1.6rem;
+        border-radius: 55px;
+        background-color: var(--bgHeader);
+        box-shadow: 1px 1px 40px #2323242a;
+
+        & ul {
+            gap: 16px;
+
+            & li {
+                & a {
+                    color: var(--text-color);
+                    opacity: 0.9;
+                    font-size: 0.88rem;
+                    font-weight: 500;
+
+                    &:hover {
+                        color: var(--blue-color);
+                        opacity: 1;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+/*
+=================================
+======= Responsive Screen =======
+=================================
+*/
+
+@media (width < 700px) {
+    header nav {
+        display: none;
+    }
+
+    header .menu {
+        display: block;
+    }
+}
+
+
+/*
+================================
+======= Animation Pop Up =======
+================================
+*/
+
+@keyframes mymove{
+    0%{
+        scale: 0;
+    }
+    50%{
+        scale:1.2;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+/*
+==============================
+======= Icon In Header =======
+==============================
+*/
+
+.icon-moon-o,.icon-menu{
+    background-color:var(--bgHeader);
+    padding: .7rem;
+    border-radius: 50%;
+    color:var(--subtitle-color);
+    border: 1px solid rgba(244,165,96,0.249);
+    transition: 0.2s;
+    &:hover{
+        color: var(--text-color);
+        border: 1px solid rgb(244, 165, 96);
+    }
+}
+
+.icon-close{
+    font-size:1.5rem;
+    color: var(--subtitle-color);
+    transition: 0.3s;
+    font-weight: bold;
+    &:hover{
+        font-size: 1.7rem;
+        color: crimson;
+        rotate: 180deg;
+    }
+}
